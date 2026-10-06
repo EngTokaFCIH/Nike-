@@ -1,0 +1,188 @@
+:root{
+    --main-color: rgb(251, 37, 39);
+    --first-color: rgb(251, 37, 39);
+    --second-color: #025091;
+    --third-color: #a15900;
+} 
+
+body{
+    background: #ada996;
+    background: -webkit-linear-gradient(to right,#eaeaea,#dbdbdb,#f2f2f2,#ada996);
+    background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+}
+
+*{font-family: "Nunito", sans-serif;}
+
+.mainButton{
+    background-color: transparent;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    transition-duration: 0.5s;
+}
+
+.mainButton:hover{
+    background-color: var(--main-color);
+    color: #ffff;
+}
+
+.mainButton.remove{
+    border: 1px solid var(--bs-warning);
+    color: var(--bs-warning);
+}
+
+.mainButton.remove:hover{
+    background-color: var(--bs-warning);
+    color: #ffff;
+}
+
+.mainColor{
+    color: var(--main-color);
+}
+
+.mainBorder{
+    border: 1px solid var(--main-color);
+}
+
+.mainSize{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup.active{
+    display: flex;
+}
+
+.popup[data-popup-name="shop"].active{
+    display: block;
+}
+
+.popup .box{
+    background: rgba(173, 169, 150);
+    background: -webkit-linear-gradient(to right, rgba(234, 234, 234), rgba(219, 219, 219), rgba(242, 242, 242), rgba(173, 169, 150));
+    background: linear-gradient(to right, rgba(234, 234, 234), rgba(219, 219, 219), rgba(242, 242, 242), rgba(173, 169, 150));
+    
+    width: 380px;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition-duration: 1s;
+}
+
+.popup[data-popup-name="shop"]{
+    overflow-y: auto;
+    scrollbar-width: 0px;
+}
+
+.popup[data-popup-name="shop"] .box{
+    margin: 50px auto;
+    width: 60%;
+}
+
+.popup[data-popup-name="shop"]::-webkit-scrollbar{
+    display: none;
+}
+
+.popup[data-popup-name="product"] .box{
+    width: 60%;
+}
+
+.popup[data-popup-name="product"] .box .size .value ul li {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+    color: #777777;
+}
+
+.popup[data-popup-name="product"] .box .size .value ul li:hover{
+    color: #fff;
+}
+
+.popup[data-popup-name="product"] .box .size .value ul li.active {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.popup[data-popup-name="product"] .box p{
+    font-size: 16px;
+    width: 90%;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.color .value ul li {
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.color .value ul li.active {
+    box-shadow: #00000040 0 54px 55px, #0000001f 0 -12px 30px, #0000001f 0 4px 6px, #0000002b 0 12px 13px, #00000017 0 -3px 5px;
+    position: relative;
+}
+
+.color .value ul li.active::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+}
+
+.popup.show .box{
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.popup .box .head i{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 25px;
+}
+
+.popup[data-popup-name="product"].active{
+    display: block;
+}
+
+.popup[data-popup-name="product"]{
+    overflow-y: auto;
+    scrollbar-width: 0px;
+}
+
+.popup[data-popup-name="product"] .box{
+    margin: 50px auto;
+    width: 60%;
+}
+
+.popup[data-popup-name="product"]::-webkit-scrollbar{
+    display: none;
+}
+
+.popup[data-popup-name="product"] .box{
+    margin: 20px auto;
+    width: 50%;
+}
