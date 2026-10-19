@@ -157,7 +157,7 @@ nav.navbar .nav-link.active {
     transform: translate(-50%, -50%) rotate(0deg) scale(0.3);
     opacity: 0;
     transition-duration: 1s;
-    max-width: 100%;
+    max-width: 97%;
 }
 
 #SC-Carousel .SC-Carousel-inner .SC-Carousel-item.active .part2 .item img:nth-of-type(2) {
@@ -366,6 +366,10 @@ nav.navbar .nav-link.active {
     width: 50%;
 }
 
+.searchAlert.alert{
+    width: 50%;
+}
+
 .search-product{
     position: relative;
 }
@@ -421,3 +425,21 @@ div[data-popup-name="shop"] .product .size .value ul li.active {
     background-color: var(--main-color);
     color: #fff;
 }
+
+ /* *=========================================================================================================================================== */
+ footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 10px;
+}
+ footer p{
+    margin: 0;
+ }
+
+  footer p span{
+    color: var(--main-color);
+  }

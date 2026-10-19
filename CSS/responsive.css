@@ -108,7 +108,12 @@
     }
 
     /* =================================SEARCH===================== */
-    form{
+
+    .search{
+        width: 100%;
+    }
+
+    .searchAlert.alert{
         width: 90%;
     }
 
@@ -160,7 +165,11 @@
         max-width: 60%;
     }
 
-    form{
+    .search{
+        width: 70%;
+    }
+
+    .searchAlert.alert{
         width: 70%;
     }
 
@@ -271,7 +280,11 @@
         margin: initial;
     }
 
-    form{
+    .search{
+        width: 50%;
+    }
+
+    .searchAlert.alert{
         width: 50%;
     }
 

@@ -14,8 +14,8 @@ let navEle = document.querySelector("nav.navbar"),
     searchingForm = document.querySelector("form"),
     searchingInput = searchingForm.querySelector("input"),
     searchingValue = searchingInput.value.trim(),
-    alert = document.querySelector("form+p.alert"),
-    regexName = /^[0-9A-Z]?[\.A-Za-z0-9\-]{3,}$/,
+    alert = document.querySelector("form+p.searchAlert"),
+    regexName = /^[0-9A-Z]?[\.A-Za-z0-9'\-\s]{3,}$/i,
     searchProducts,
     loadingPage = document.querySelector(".loading-page");
 
@@ -175,7 +175,7 @@ latest.forEach(function (product) {
                         <div class="lable me-3"><h6 class="fw-bolder">Size :</h6></div>
                         <div class="value">
                         <ul class="list-unstyled d-flex column-gap-2">
-                            ${prepareSizesList(product.sizes, isProductIntoCart)}
+                            ${prepareSizesList(product.sizes, isProductIntoCart, product.id)}
                         </ul>
                         </div>
                     </div>

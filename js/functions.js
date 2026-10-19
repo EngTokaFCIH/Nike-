@@ -203,7 +203,7 @@ function showProduct(productId , isProductIntoCart) {
                     </div>
                     <div class="value">
                         <ul class="list-unstyled d-flex column-gap-2">
-                            ${prepareSizesList(product.sizes , isProductIntoCart)}
+                            ${prepareSizesList(product.sizes , isProductIntoCart , product.id)}
                         </ul>
                     </div>
                 </div>
